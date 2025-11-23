@@ -1,0 +1,521 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <!--
+    - primary meta tags
+  -->
+  <title>CozyNest - All Products</title>
+  <meta name="title" content="CozyNest - All Products" />
+  <meta name="description" content="Browse all handcrafted fashion and vintage decor products at CozyNest." />
+  <!--
+    - favicon
+  -->
+  <link rel="shortcut icon" href="./assets/images/favicon-light.svg" type="image/svg+xml" />
+  <!-- 
+   - css link
+  -->
+  <link href="./dist/style.css" rel="stylesheet" />
+  <!-- 
+    - google font link
+  -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;600;700&family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet" />
+  <!--
+    - material icon link
+  -->
+  <link
+    rel="stylesheet"
+    href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@24,400,0,0&icon_names=close,menu,shopping_cart_checkout&display=block"
+  />
+  <!-- 
+    - script link
+  -->
+  <script src="./assets/js/script.js" defer></script>
+</head>
+
+<body class="bg-papaya_whip text-jet font-secondary">
+
+  <!-- 
+    - #Header (Sama seperti di index.html)
+  -->
+  <header class="header" data-header>
+    <div class="container relative flex justify-between items-center px-3 py-5 mx-auto">
+      <a href="#" class="logo">
+        <img src="./assets/images/logo-light.svg" width="129" height="16" alt="cozynest" class="xxl:w-40" />
+      </a>
+      <nav class="navbar" data-navbar>
+        <button class="nav-close-btn" aria-label="close menu" data-nav-toggler>
+          <span class="material-symbols-rounded" aria-hidden="true"> close </span>
+        </button>
+        <ul class="md:flex md:items-center md:gap-3 xl:gap-7">
+          <li><a href="index.html" class="navbar-link">Home</a></li>
+          <li>
+            <button class="navbar-link flex items-center gap-2 min-w-full" aria-label="shop" data-dropdown-toggler>
+              Shop
+              <ion-icon name="caret-forward-outline" aria-hidden="true" class="duration-200"></ion-icon>
+            </button>
+            <div class="dropdown" data-dropdown>
+              <div class="dropdown-content">
+                <a href="#" class="pt-2">All Products</a>
+                <a href="#" class="">Clothing</a>
+                <a href="#" class="">Candles</a>
+                <a href="#" class="">Accessories</a>
+                <a href="#" class="">Bags</a>
+                <a href="#" class="">Clocks</a>
+                <a href="#" class="pb-2">SALE 🏷️</a>
+              </div>
+            </div>
+          </li>
+          <li><a href="#blog" class="navbar-link">Blog</a></li>
+          <li><a href="#latest" class="navbar-link">Latest</a></li>
+          <li><a href="#info" class="navbar-link">Info</a></li>
+        </ul>
+      </nav>
+      <div class="rounded-md overflow-hidden flex items-center gap-3 lg:fixed lg:top-5 lg:right-5">
+        <button class="cart-toggler" aria-label="cart toggler" data-cart-toggler>
+          <span class="material-symbols-rounded text-papaya_whip" aria-hidden="true"> shopping_cart_checkout </span>
+        </button>
+        <div class="relative">
+          <div class="cart-modal" data-cart-modal>
+            <ul>
+              <li class="flex gap-2 pr-2">
+                <figure class="img-holder w-20 h-20 rounded-md flex-shrink-0" style="--width: 80; --height: 80">
+                  <img src="./assets/images/cart-1.jpg" width="80" height="80" loading="lazy" alt="Handmade painted coffee mug" class="img-cover" />
+                </figure>
+                <div>
+                  <span class="text-caf_noir text-sm font-bold">Handmade painted coffee mug</span>
+                  <div class="flex items-center gap-1 text-[13px]">
+                    <p>1 ×</p>
+                    <p>$85.00</p>
+                  </div>
+                </div>
+                <button class="h-5 w-5 flex-shrink-0 mb-auto" aria-label="remove product">
+                  <span class="material-symbols-rounded" aria-hidden="true"> close </span>
+                </button>
+              </li>
+              <div class="h-[1px] w-full my-3 bg-butterscotch_light"></div>
+              <li class="flex gap-2 pr-2">
+                <figure class="img-holder w-20 h-20 rounded-md flex-shrink-0" style="--width: 80; --height: 80">
+                  <img src="./assets/images/cart-2.jpg" width="80" height="80" loading="lazy" alt="Vintage Antique & Candle Holder" />
+                </figure>
+                <div>
+                  <span class="text-caf_noir text-sm font-bold">Vintage Antique & Candle Holder</span>
+                  <div class="flex items-center gap-1 text-[13px]">
+                    <p>1 ×</p>
+                    <p>$990.00</p>
+                  </div>
+                </div>
+                <button class="h-5 w-5 flex-shrink-0 mb-auto" aria-label="remove product">
+                  <span class="material-symbols-rounded" aria-hidden="true"> close </span>
+                </button>
+              </li>
+              <div class="h-[1px] w-full my-3 bg-butterscotch_light"></div>
+              <div class="flex justify-center items-center gap-2">
+                <a href="#" class="btn bg-butterscotch_light py-3 px-4" aria-label="checkout"> checkout </a>
+                <a href="#" class="btn btn-text py-3 px-4" aria-label="view cart"> view cart </a>
+              </div>
+            </ul>
+          </div>
+        </div>
+        <button class="h-10 w-10 grid place-items-center md:hidden" aria-label="toggle menu" data-nav-toggler>
+          <span class="material-symbols-rounded text-papaya_whip" aria-hidden="true"> menu </span>
+        </button>
+      </div>
+      <div class="overlay" data-overlay data-nav-toggler></div>
+    </div>
+  </header>
+
+  <main>
+    <!-- 
+      - #Product Categories Header
+    -->
+    <section class="py-10 md:py-16">
+      <div class="container mx-auto px-3 sm:px-7 md:px-10 xl:px-14 xxl:px-20">
+        <h1 class="text-caf_noir font-primary font-bold text-6xl text-center my-3 md:text-start lg:text-7xl">Our Product Categories</h1>
+        <p class="text-jet text-center text-lg max-w-xl mx-auto mt-4">Explore our curated popular collection product categories featuring high-quality.</p>
+      </div>
+    </section>
+
+    <!-- 
+      - #All Products Grid
+    -->
+    <section class="py-10 md:py-16">
+      <div class="container mx-auto px-3 sm:px-7 md:px-10 xl:px-14 xxl:px-20">
+        <div class="grid gap-6 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5">
+          
+          <!-- Product 1: Bag -->
+          <div class="group pb-6 space-y-5 max-w-64 rounded-lg duration-75 ease-linear">
+            <div class="img-box relative overflow-hidden">
+              <figure class="img-holder rounded-lg h-80" style="--width: 256px; --height: 320px">
+                <img
+                  src="./assets/images/new-product-1.jpg"
+                  width="256"
+                  height="320"
+                  loading="lazy"
+                  alt="Cable Roll Neck Sweater"
+                  class="img-cover duration-[0.5s] ease-linear group-hover:scale-105"
+                />
+              </figure>
+              <div
+                class="bg-[#d89245c7] text-white px-3 py-1 absolute top-2/4 left-2/4 -translate-x-2/4 flex items-center opacity-0 duration-75 ease-linear group-hover:-translate-y-2/4 group-hover:opacity-100"
+              >
+                <a href="#" class="h-9 w-9 grid place-items-center">
+                  <ion-icon name="bag-outline" aria-hidden="true" class="text-[22px]"></ion-icon>
+                </a>
+                <a href="#" class="h-9 w-9 grid place-items-center">
+                  <ion-icon name="heart-outline" aria-hidden="true" class="text-[22px]"></ion-icon>
+                </a>
+                <a href="#" class="h-9 w-9 grid place-items-center">
+                  <ion-icon name="eye-outline" aria-hidden="true" class="text-[22px]"></ion-icon>
+                </a>
+              </div>
+            </div>
+            <div class="card-content space-y-2">
+              <div class="flex justify-between items-start">
+                <p class="text-lg text-jet font-bold">Bag</p>
+                <span class="bg-butterscotch px-2 py-1 text-sm text-papaya_whip font-bold">$25.75</span>
+              </div>
+              <p class="product-detail">Artisanal designs that make every day a feast</p>
+            </div>
+          </div>
+
+          <!-- Product 2: Wool Panda Bag -->
+          <div class="group pb-6 space-y-5 max-w-64 rounded-lg duration-75 ease-linear">
+            <div class="img-box relative overflow-hidden">
+              <figure class="img-holder rounded-lg h-80" style="--width: 256px; --height: 324px">
+                <img
+                  src="./assets/images/new-product-3.png"
+                  width="256"
+                  height="324"
+                  loading="lazy"
+                  alt="Wool Panda Diary Cover"
+                  class="img-cover duration-[0.5s] ease-linear group-hover:scale-105"
+                />
+              </figure>
+              <div
+                class="bg-[#d89245c7] text-white px-3 py-1 absolute top-2/4 left-2/4 -translate-x-2/4 flex items-center opacity-0 duration-75 ease-linear group-hover:-translate-y-2/4 group-hover:opacity-100"
+              >
+                <a href="#" class="h-9 w-9 grid place-items-center">
+                  <ion-icon name="bag-outline" aria-hidden="true" class="text-[22px]"></ion-icon>
+                </a>
+                <a href="#" class="h-9 w-9 grid place-items-center">
+                  <ion-icon name="heart-outline" aria-hidden="true" class="text-[22px]"></ion-icon>
+                </a>
+                <a href="#" class="h-9 w-9 grid place-items-center">
+                  <ion-icon name="eye-outline" aria-hidden="true" class="text-[22px]"></ion-icon>
+                </a>
+              </div>
+            </div>
+            <div class="card-content space-y-2">
+              <div class="flex justify-between items-start">
+                <p class="text-lg text-jet font-bold">Wool Panda Bag</p>
+                <span class="bg-butterscotch px-2 py-1 text-sm text-papaya_whip font-bold">$25.75</span>
+              </div>
+              <p class="product-detail">Casual yet sophisticated pieces for every room in the house</p>
+            </div>
+          </div>
+
+          <!-- Product 3: Decor -->
+          <div class="group pb-6 space-y-5 max-w-64 rounded-lg duration-75 ease-linear">
+            <div class="img-box relative overflow-hidden">
+              <figure class="img-holder rounded-lg h-80" style="--width: 256px; --height: 320px">
+                <img
+                  src="./assets/images/new-product-4.jpg"
+                  width="256"
+                  height="320"
+                  loading="lazy"
+                  alt="Vintage Lace Hand Watch"
+                  class="img-cover duration-[0.5s] ease-linear group-hover:scale-105"
+                />
+              </figure>
+              <div
+                class="bg-[#d89245c7] text-white px-3 py-1 absolute top-2/4 left-2/4 -translate-x-2/4 flex items-center opacity-0 duration-75 ease-linear group-hover:-translate-y-2/4 group-hover:opacity-100"
+              >
+                <a href="#" class="h-9 w-9 grid place-items-center">
+                  <ion-icon name="bag-outline" aria-hidden="true" class="text-[22px]"></ion-icon>
+                </a>
+                <a href="#" class="h-9 w-9 grid place-items-center">
+                  <ion-icon name="heart-outline" aria-hidden="true" class="text-[22px]"></ion-icon>
+                </a>
+                <a href="#" class="h-9 w-9 grid place-items-center">
+                  <ion-icon name="eye-outline" aria-hidden="true" class="text-[22px]"></ion-icon>
+                </a>
+              </div>
+            </div>
+            <div class="card-content space-y-2">
+              <div class="flex justify-between items-start">
+                <p class="text-lg text-jet font-bold">Decor</p>
+                <span class="bg-butterscotch px-2 py-1 text-sm text-papaya_whip font-bold">$25.75</span>
+              </div>
+              <p class="product-detail">Tasteful elements to mix and match for an elevated look</p>
+            </div>
+          </div>
+
+          <!-- Product 4: Autumn Aesthetic Candles -->
+          <div class="group pb-6 space-y-5 max-w-64 rounded-lg duration-75 ease-linear">
+            <div class="img-box relative overflow-hidden">
+              <figure class="img-holder rounded-lg h-80" style="--width: 256px; --height: 256px">
+                <img
+                  src="./assets/images/new-product-5.jpg"
+                  width="256"
+                  height="256"
+                  loading="lazy"
+                  alt="Boho crochet Earrings"
+                  class="img-cover duration-[0.5s] ease-linear group-hover:scale-105"
+                />
+              </figure>
+              <div
+                class="bg-[#d89245c7] text-white px-3 py-1 absolute top-2/4 left-2/4 -translate-x-2/4 flex items-center opacity-0 duration-75 ease-linear group-hover:-translate-y-2/4 group-hover:opacity-100"
+              >
+                <a href="#" class="h-9 w-9 grid place-items-center">
+                  <ion-icon name="bag-outline" aria-hidden="true" class="text-[22px]"></ion-icon>
+                </a>
+                <a href="#" class="h-9 w-9 grid place-items-center">
+                  <ion-icon name="heart-outline" aria-hidden="true" class="text-[22px]"></ion-icon>
+                </a>
+                <a href="#" class="h-9 w-9 grid place-items-center">
+                  <ion-icon name="eye-outline" aria-hidden="true" class="text-[22px]"></ion-icon>
+                </a>
+              </div>
+            </div>
+            <div class="card-content space-y-2">
+              <div class="flex justify-between items-start">
+                <p class="text-lg text-jet font-bold">Autumn Aesthetic Candles</p>
+                <span class="bg-butterscotch px-2 py-1 text-sm text-papaya_whip font-bold">$25.75</span>
+              </div>
+              <p class="product-detail">Tasteful elements to mix and match for an elevated look</p>
+            </div>
+          </div>
+
+          <!-- Product 5: Clothing -->
+          <div class="group pb-6 space-y-5 max-w-64 rounded-lg duration-75 ease-linear">
+            <div class="img-box relative overflow-hidden">
+              <figure class="img-holder rounded-lg h-80" style="--width: 256px; --height: 320px">
+                <img
+                  src="./assets/images/slide-1.jpg"
+                  width="256"
+                  height="320"
+                  loading="lazy"
+                  alt="Attire"
+                  class="img-cover duration-[0.5s] ease-linear group-hover:scale-105"
+                />
+              </figure>
+              <div
+                class="bg-[#d89245c7] text-white px-3 py-1 absolute top-2/4 left-2/4 -translate-x-2/4 flex items-center opacity-0 duration-75 ease-linear group-hover:-translate-y-2/4 group-hover:opacity-100"
+              >
+                <a href="#" class="h-9 w-9 grid place-items-center">
+                  <ion-icon name="bag-outline" aria-hidden="true" class="text-[22px]"></ion-icon>
+                </a>
+                <a href="#" class="h-9 w-9 grid place-items-center">
+                  <ion-icon name="heart-outline" aria-hidden="true" class="text-[22px]"></ion-icon>
+                </a>
+                <a href="#" class="h-9 w-9 grid place-items-center">
+                  <ion-icon name="eye-outline" aria-hidden="true" class="text-[22px]"></ion-icon>
+                </a>
+              </div>
+            </div>
+            <div class="card-content space-y-2">
+              <div class="flex justify-between items-start">
+                <p class="text-lg text-jet font-bold">Clothing</p>
+                <span class="bg-butterscotch px-2 py-1 text-sm text-papaya_whip font-bold">$25.75</span>
+              </div>
+              <p class="product-detail">Artisanal designs that make every day a feast</p>
+            </div>
+          </div>
+
+          <!-- Product 6: Accessories -->
+          <div class="group pb-6 space-y-5 max-w-64 rounded-lg duration-75 ease-linear">
+            <div class="img-box relative overflow-hidden">
+              <figure class="img-holder rounded-lg h-80" style="--width: 256px; --height: 320px">
+                <img
+                  src="./assets/images/slide-2.jpg"
+                  width="256"
+                  height="320"
+                  loading="lazy"
+                  alt="Jewellery"
+                  class="img-cover duration-[0.5s] ease-linear group-hover:scale-105"
+                />
+              </figure>
+              <div
+                class="bg-[#d89245c7] text-white px-3 py-1 absolute top-2/4 left-2/4 -translate-x-2/4 flex items-center opacity-0 duration-75 ease-linear group-hover:-translate-y-2/4 group-hover:opacity-100"
+              >
+                <a href="#" class="h-9 w-9 grid place-items-center">
+                  <ion-icon name="bag-outline" aria-hidden="true" class="text-[22px]"></ion-icon>
+                </a>
+                <a href="#" class="h-9 w-9 grid place-items-center">
+                  <ion-icon name="heart-outline" aria-hidden="true" class="text-[22px]"></ion-icon>
+                </a>
+                <a href="#" class="h-9 w-9 grid place-items-center">
+                  <ion-icon name="eye-outline" aria-hidden="true" class="text-[22px]"></ion-icon>
+                </a>
+              </div>
+            </div>
+            <div class="card-content space-y-2">
+              <div class="flex justify-between items-start">
+                <p class="text-lg text-jet font-bold">Accessories</p>
+                <span class="bg-butterscotch px-2 py-1 text-sm text-papaya_whip font-bold">$25.75</span>
+              </div>
+              <p class="product-detail">Casual yet sophisticated pieces for every room in the house</p>
+            </div>
+          </div>
+
+          <!-- Product 7: Clocks -->
+          <div class="group pb-6 space-y-5 max-w-64 rounded-lg duration-75 ease-linear">
+            <div class="img-box relative overflow-hidden">
+              <figure class="img-holder rounded-lg h-80" style="--width: 256px; --height: 320px">
+                <img
+                  src="./assets/images/slide-3.jpg"
+                  width="256"
+                  height="320"
+                  loading="lazy"
+                  alt="Decor"
+                  class="img-cover duration-[0.5s] ease-linear group-hover:scale-105"
+                />
+              </figure>
+              <div
+                class="bg-[#d89245c7] text-white px-3 py-1 absolute top-2/4 left-2/4 -translate-x-2/4 flex items-center opacity-0 duration-75 ease-linear group-hover:-translate-y-2/4 group-hover:opacity-100"
+              >
+                <a href="#" class="h-9 w-9 grid place-items-center">
+                  <ion-icon name="bag-outline" aria-hidden="true" class="text-[22px]"></ion-icon>
+                </a>
+                <a href="#" class="h-9 w-9 grid place-items-center">
+                  <ion-icon name="heart-outline" aria-hidden="true" class="text-[22px]"></ion-icon>
+                </a>
+                <a href="#" class="h-9 w-9 grid place-items-center">
+                  <ion-icon name="eye-outline" aria-hidden="true" class="text-[22px]"></ion-icon>
+                </a>
+              </div>
+            </div>
+            <div class="card-content space-y-2">
+              <div class="flex justify-between items-start">
+                <p class="text-lg text-jet font-bold">Clocks</p>
+                <span class="bg-butterscotch px-2 py-1 text-sm text-papaya_whip font-bold">$25.75</span>
+              </div>
+              <p class="product-detail">Tasteful elements to mix and match for an elevated look</p>
+            </div>
+          </div>
+
+          <!-- Product 8: Sale Item -->
+          <div class="group pb-6 space-y-5 max-w-64 rounded-lg duration-75 ease-linear">
+            <div class="img-box relative overflow-hidden">
+              <figure class="img-holder rounded-lg h-80" style="--width: 256px; --height: 320px">
+                <img
+                  src="./assets/images/off-1.jpg"
+                  width="256"
+                  height="320"
+                  loading="lazy"
+                  alt="Flower Vase Sale"
+                  class="img-cover duration-[0.5s] ease-linear group-hover:scale-105"
+                />
+              </figure>
+              <div
+                class="bg-[#d89245c7] text-white px-3 py-1 absolute top-2/4 left-2/4 -translate-x-2/4 flex items-center opacity-0 duration-75 ease-linear group-hover:-translate-y-2/4 group-hover:opacity-100"
+              >
+                <a href="#" class="h-9 w-9 grid place-items-center">
+                  <ion-icon name="bag-outline" aria-hidden="true" class="text-[22px]"></ion-icon>
+                </a>
+                <a href="#" class="h-9 w-9 grid place-items-center">
+                  <ion-icon name="heart-outline" aria-hidden="true" class="text-[22px]"></ion-icon>
+                </a>
+                <a href="#" class="h-9 w-9 grid place-items-center">
+                  <ion-icon name="eye-outline" aria-hidden="true" class="text-[22px]"></ion-icon>
+                </a>
+              </div>
+            </div>
+            <div class="card-content space-y-2">
+              <div class="flex justify-between items-start">
+                <p class="text-lg text-jet font-bold">Flower Vase (Sale)</p>
+                <span class="bg-butterscotch px-2 py-1 text-sm text-papaya_whip font-bold">$15.00</span>
+              </div>
+              <p class="product-detail">Elevate your home with this beautiful vase.</p>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- 
+      - #Pagination (Optional)
+    -->
+    <section class="py-10 md:py-16">
+      <div class="container mx-auto px-3 sm:px-7 md:px-10 xl:px-14 xxl:px-20">
+        <div class="flex justify-center gap-3">
+          <button class="h-10 w-10 grid place-items-center rounded-full border border-caf_noir text-caf_noir hover:bg-caf_noir hover:text-papaya_whip transition">
+            <ion-icon name="chevron-back-outline" aria-hidden="true" class="text-[20px]"></ion-icon>
+          </button>
+          <button class="h-10 w-10 grid place-items-center rounded-full bg-caf_noir text-papaya_whip">1</button>
+          <button class="h-10 w-10 grid place-items-center rounded-full border border-caf_noir text-caf_noir hover:bg-caf_noir hover:text-papaya_whip transition">2</button>
+          <button class="h-10 w-10 grid place-items-center rounded-full border border-caf_noir text-caf_noir hover:bg-caf_noir hover:text-papaya_whip transition">3</button>
+          <button class="h-10 w-10 grid place-items-center rounded-full border border-caf_noir text-caf_noir hover:bg-caf_noir hover:text-papaya_whip transition">
+            <ion-icon name="chevron-forward-outline" aria-hidden="true" class="text-[20px]"></ion-icon>
+          </button>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- 
+    - #Footer (Sama seperti di index.html)
+  -->
+  <footer id="info">
+    <div class="container mx-auto">
+      <div class="relative px-3 py-12 space-y-6 md:space-y-24 lg:pb-24">
+        <a href="#" class="logo">
+          <img src="./assets/images/logo-dark.svg" loading="lazy" alt="" class="md:min-w-36" />
+        </a>
+        <div class="flex flex-wrap gap-y-6 gap-x-20 sm:grid sm:grid-cols-2 md:grid-cols-4 md:gap-x-10">
+          <h3 class="text-caf_noir font-primary font-bold text-4xl md:mt-4">Get in Touch</h3>
+          <div>
+            <span class="text-caf_noir font-bold">Mailing Address</span>
+            <p>
+              123 Anywhere St., Any City, <br />
+              State, Country 12345
+            </p>
+          </div>
+          <div class="mt-auto md:mt-0">
+            <span class="text-caf_noir font-bold">Email Address</span>
+            <a href="mailto:hello@reallygreatsite.com"> hello@reallygreatsite.com </a>
+          </div>
+          <div>
+            <div class="flex items-center gap-2 mb-2 md:-mt-10">
+              <a href="#" class="bg-caf_noir h-7 w-7 grid place-items-center rounded-full group">
+                <ion-icon name="logo-twitter" aria-hidden="true" class="text-papaya_whip duration-150 group-hover:scale-125"></ion-icon>
+              </a>
+              <a href="#" class="bg-caf_noir h-7 w-7 grid place-items-center rounded-full group">
+                <ion-icon name="logo-facebook" aria-hidden="true" class="text-papaya_whip duration-150 group-hover:scale-125"></ion-icon>
+              </a>
+              <a href="#" class="bg-caf_noir h-7 w-7 grid place-items-center rounded-full group">
+                <ion-icon name="logo-github" aria-hidden="true" class="text-papaya_whip duration-150 group-hover:scale-125"></ion-icon>
+              </a>
+              <a href="#" class="bg-caf_noir h-7 w-7 grid place-items-center rounded-full group">
+                <ion-icon name="logo-instagram" aria-hidden="true" class="text-papaya_whip duration-150 group-hover:scale-125"></ion-icon>
+              </a>
+            </div>
+            <span class="text-caf_noir font-bold md:mt-3">Phone Number</span>
+            <a href="tel:(123) 456 7890"> (123) 456 7890 </a>
+          </div>
+        </div>
+      </div>
+      <div class="footer-bottom px-3 py-4 space-y-6">
+        <p>
+          &copy Copyright
+          <a href="" class="text-caf_noir font-bold underline inline">fauzi</a>
+          2025 | All rights reserved
+        </p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- 
+    - ionicon link
+  -->
+  <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+  <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+
+</body>
+</html>
